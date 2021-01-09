@@ -19,9 +19,10 @@ with open(file_to_load) as polling_data:
     list_of_votes=[]
     #create a list for candidate totals
     candidate_totals=[]
+    khan= 0
+
     #and the vote for each starts at 0
     #then create a loop to calculate the total votes
-    khan=('khan')
     # * A complete list of candidates who received votes
 
     for vote in reader:
@@ -38,16 +39,18 @@ with open(file_to_load) as polling_data:
             #candidates.append("some candidate")
             unique_names.append(candidates_name)
             #add the unique candidates to that list
+         
     print(candidates_name)
+        #Count each number in the candidates list for Khan
 
-        #khan=int(candidates.count("Khan")) #Count each number in the candidates list for Khan
+        #khan=int(candidates_name.count("Khan")) 
         #OTooley= int(candidates.count("O'Tooley")) #Counte each number in the candidates list for O'Tooley
         #Correy= int(candidates.count("Correy")) 
 
         #if candidates_name not in unique_candidates:
             #candidates.append(uniuqe_candidates)
 
-        #print()
+        #print(Khan)
 #text 
 output = (          
     f"Vote Analysis\n"
