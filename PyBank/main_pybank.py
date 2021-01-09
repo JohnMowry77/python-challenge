@@ -1,6 +1,8 @@
 import csv
 import os
+
 file_to_load = os.path.join("Resources", "budget_data.csv")
+
 total_months = 0
 month_of_change = []
 net_change_list = []
@@ -38,4 +40,26 @@ output = (
    f"Average  Change: ${net_monthly_avg:.2f}\n"
    f"Greatest Increase in Profits: {greatest_increase[0]} (${greatest_increase[1]})\n"
    f"Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})\n")
+print(output)
+
+#specify the file to write to
+output_path=os.path.join("Resources", "pybank_analysis.txt")
+#open the file using "write" mode. Specifiy the variable to hold the contents
+with open(output_path, 'w', newline='') as txtfile:
+    #Initialize csv.writer
+    txtwriter=csv.writer(output_path, delimiter= ',')
+    txtwriter.writerow (f"Financial Analysis\n")
+
+
+    #write the row (column headers)
+    
+  
+    #output = (
+   #f"Financial Analysis\n"
+   #f"----------------------------\n"  #print space in between 
+   #f"Total Months: {total_months}\n" #print total months = the number of months move to next line of code
+   #f"Total: ${total_net}\n"#print total = the number of months...
+   #f"Average  Change: ${net_monthly_avg:.2f}\n"
+   #f"Greatest Increase in Profits: {greatest_increase[0]} (${greatest_increase[1]})\n"
+   #f"Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})\n")
 print(output)
