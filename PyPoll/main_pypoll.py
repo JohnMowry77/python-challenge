@@ -70,16 +70,4 @@ print(output)
 #   * The winner of the election based on popular vote.
 
  
-# We can also add conditional logic (if statements) to a list comprehension
-#july_temperatures = [87, 85, 92, 79, 106]
-# hot_days = []
-# for temperature in july_temperatures:
-#     if temperature > 90:
-#         hot_days.append(temperature)
-# print(hot_days)
 
-
-# # List comprehensions provide concise syntax for creating lists
-# letters=[len(each_item) for each_item in fish] # add each item to a new list
-# letters = [letter for letter in fish]
-# print(letters)

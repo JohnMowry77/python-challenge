@@ -29,6 +29,8 @@ with open(file_to_load) as polling_data:
     total_votes = len(candidates_dup) #returns the total_votes using len function
     #print(total_votes) #print total votes 35210001
     #store candidates and votes to dictonary use {}
+    #candidates= {'candidate1': Khan, 'candidate2': Correy, 'candidate3': Li, 'candidate4': OTooley}
+
     #results_total=dict(collections.counter(candidate_list))
 
     pypoll = {} #call the dict pypoll
@@ -46,10 +48,10 @@ with open(file_to_load) as polling_data:
         print(total_votes)
         print(pypoll[candidate_list[i]]) #print total number of votes each candidate won
         print("--------------------------")
-        khan= 0
-        correy= 0
-        li = 0
-        oTooley= 0
+        #khan= 0
+        #correy= 0
+        #li = 0
+        #oTooley= 0
         #print winner
         #use string function and max to find the candidates with most votes from candidate_list[i]
         #the winner of the election based on popular vote
@@ -60,7 +62,7 @@ output = (
     f"----------------------------\n"  #print space in between 
     f"Total Votes: {total_votes}\n"
     f"----------------------------\n"
-    #f"Correy: {candidate_list}\n"
+    #f"candidate: {candidates}\n"
     #f"khan: {candidate_list[i]}\n"
     #f"Khan: 63.000% (2218231) #how to get this in f string? 
     #f"Correy: 20.000% (704200) \n"
