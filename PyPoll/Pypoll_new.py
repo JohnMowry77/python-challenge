@@ -35,7 +35,9 @@ with open(file_to_load) as polling_data:
 
     pypoll = {} #call the dict pypoll
     candidates= {"candidate1": "Khan", "candidate2": "Correy", "candidate3": "Li", "candidate3": "OTooley"}
-    print(candidates)
+    #print(candidates)
+    #for x,y in candidates.items():
+        #print(f"{x},{y}")
 
     #for loop to itereate through dict
     #for i in range(len(results_total)):
@@ -58,7 +60,13 @@ with open(file_to_load) as polling_data:
         #use string function and max to find the candidates with most votes from candidate_list[i]
         #the winner of the election based on popular vote
     print("Winner: " + str(max(pypoll)))
-
+    poll_win= 0
+    #for x, y in candidates.items():
+       # if y > poll_win:
+            #poll_win_count = y
+            #poll_win_name = x
+    #print (f"{poll_win_name}-{poll_win_count}")
+    #error if y > pol_win: Typeerror: '>' not supported between instances of 'str' and 'int'
         #compary candidates to other candidates
 
 
