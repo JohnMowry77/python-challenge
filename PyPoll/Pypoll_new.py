@@ -34,6 +34,8 @@ with open(file_to_load) as polling_data:
     #results_total=dict(collections.counter(candidate_list))
 
     pypoll = {} #call the dict pypoll
+    candidates= {"candidate1": "Khan", "candidate2": "Correy", "candidate3": "Li", "candidate3": "OTooley"}
+    print(candidates)
 
     #for loop to itereate through dict
     #for i in range(len(results_total)):
@@ -56,6 +58,9 @@ with open(file_to_load) as polling_data:
         #use string function and max to find the candidates with most votes from candidate_list[i]
         #the winner of the election based on popular vote
     print("Winner: " + str(max(pypoll)))
+
+        #compary candidates to other candidates
+
 
 output = (          
     f"Election Results\n"
