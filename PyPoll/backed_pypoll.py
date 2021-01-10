@@ -92,19 +92,26 @@ output = (
     #f"Winner:  + str(max({pypoll})))\n"
     f"----------------------------\n") 
 print(output)
-output_path = os.path.join("Resources", "election_results.txt")
+file_to_output = os.path.join("Analysis", "election_results.txt")
 #writer is a function of the csv module imported on line 1
-with open(output_path, 'w', newline='') as csvfile:
+with open(file_to_output, 'w', newline='') as txt_file:
     #initialize csv.writer
     #csvwriter= csv.writer(csvfile, delimiter=',')
-    csvwriter= csv.writer(csvfile)
-    csvwriter.writerow(['Election Results']) #write row election results to new txt file which python will read
-    csvwriter.writerow(['Total Votes']) 
+    #csvwriter= csv.writer(csvfile)
+    #csvwriter.writerow(['Election Results']) #write row election results to new txt file which python will read
+    #csvwriter.writerow(['Total Votes']) 
     #write row total votes to new txt file which python will read
-    csvwriter.writerow(f"Total Votes: {total_votes}")
-    csvwriter.writerow(['Khan'])
+    #csvwriter.writerow(f"Total Votes: {total_votes}")
+    #csvwriter.writerow(['Khan'])
+    election_results = (
+        f"\n\n Election Results\n"
+        f"-----------------------"
+        f"Total Votes: {total_votes}\n"
+        f"-------------------------\n")
+print(election_results)
+
     
-    csvwriter.writerow(['Correy'])
-    csvwriter.writerow(['Li'])
-    csvwriter.writerow(['OTooley'])
-    csvwriter.writerow(['Winner'])
+    #csvwriter.writerow(['Correy'])
+   #csvwriter.writerow(['Li'])
+    #csvwriter.writerow(['OTooley'])
+    #csvwriter.writerow(['Winner'])

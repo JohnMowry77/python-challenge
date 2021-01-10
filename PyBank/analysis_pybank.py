@@ -1,6 +1,6 @@
 import csv
 import os
-file_to_load = os.path.join("Analysis", "budget_data.csv")
+file_to_load = os.path.join("Resources", "budget_data.csv")
 total_months = 0
 month_of_change = []
 net_change_list = []

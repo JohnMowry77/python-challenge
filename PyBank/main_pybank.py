@@ -43,26 +43,26 @@ output = (
 print(output)
 
 #specify the file to write to
-output_path=os.path.join("Resources", "pybank_analysis.txt")
+output_path=os.path.join("Resources", "analysis.txt")
 #open the file using "write" mode. Specifiy the variable to hold the contents
-#output = (
-   #f"Financial Analysis\n"
-   #f"----------------------------\n"  #print space in between 
-   #f"Total Months: {total_months}\n" #print total months = the number of months move to next line of code
-   #f"Total: ${total_net}\n"#print total = the number of months...
-   #f"Average  Change: ${net_monthly_avg:.2f}\n"
-   #f"Greatest Increase in Profits: {greatest_increase[0]} (${greatest_increase[1]})\n"
-   #f"Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})\n")
-print(output)
 #writer is a function of the csv module imported on line 1
-with open(output_path, 'w', newline='') as csvfile:
+with open(output_path, 'w') as txt_file:
     #initialize csv.writer
     #csvwriter= csv.writer(csvfile, delimiter=',')
-    csvwriter= csv.writer(csvfile)
-    csvwriter.writerow(['Financial Analysis']) #write row financial analysis to new txt file which python will read
-    csvwriter.writerow(['Total Months']) #write row total months to new txt file which python will read
-    csvwriter.writerow(['Total'])
-    csvwriter.writerow(['Average Change'])
-    csvwriter.writerow(['Greatest Increase in Profits'])
-    csvwriter.writerow(['Greatest Decrease in Profits'])
+    csvwriter= csv.writer(txt_file)
+    #csvwriter.writerow(['Financial Analysis']) #write row financial analysis to new txt file which python will read
+    #csvwriter.writerow(['Total Months']) #write row total months to new txt file which python will read
+    #csvwriter.writerow(['Total'])
+    #csvwriter.writerow(['Average Change'])
+    #csvwriter.writerow(['Greatest Increase in Profits'])
+    #csvwriter.writerow(['Greatest Decrease in Profits'])
+    output = (
+   f"Financial Analysis\n"
+   f"----------------------------\n"  #print space in between 
+   f"Total Months: {total_months}\n" #print total months = the number of months move to next line of code
+   f"Total: ${total_net}\n"#print total = the number of months...
+   f"Average  Change: ${net_monthly_avg:.2f}\n"
+   f"Greatest Increase in Profits: {greatest_increase[0]} (${greatest_increase[1]})\n"
+   f"Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})\n")
     
+print(output)
