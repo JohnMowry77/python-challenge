@@ -20,7 +20,9 @@ with open(file_to_load) as polling_data:
         candidates_dup.append(row[2]) #add candidates name to candidates_dup list
     candidate_list = set(candidates_dup) #use set property to remove duplicate from candidate dup list
     candidate_list = list(candidate_list) #convert to list
+    print(candidate_list)
     number_candidates= len(candidate_list) #how many candidates
+    print(number_candidates)
     #print(number_candidates) Print number_candidates  result is 4
 
     #Find the total number of votes cast
@@ -33,15 +35,10 @@ with open(file_to_load) as polling_data:
 
     #results_total=dict(collections.counter(candidate_list))
 
-    pypoll = {} #call the dict pypoll (unorderd,changeable and does not allow duplicates)
-    candidates= {'Correy': 704200, 'Li': 492940, 'Khan': 2218231, "O'Tooley": 105630}
-    #{"candidate1": "Khan", "candidate2": "Correy", "candidate3": "Li", "candidate3": "OTooley"}
-    dict_names=(["OTooley", 'Correy', 'Khan', 'Li'])
-    dict_totals=([105630, 704200, 2218231, 492940])
-    print(pypoll([dict_names])
-   
+    pypoll = {} #call the dict pypoll
+    candidates= {"candidate1": "Khan", "candidate2": "Correy", "candidate3": "Li", "candidate3": "OTooley"}
     #print(candidates)
-    #for x,y in candidates.value():
+    #for x,y in candidates.items():
         #print(f"{x},{y}")
 
     #for loop to itereate through dict
@@ -57,6 +54,11 @@ with open(file_to_load) as polling_data:
         print(total_votes)
         print(pypoll[candidate_list[i]]) #print total number of votes each candidate won
         print("--------------------------")
+        
+    print(pypoll)
+    print(pypoll.keys())
+    print(pypoll.values())
+    
         #khan= 0
         #correy= 0
         #li = 0
@@ -65,7 +67,6 @@ with open(file_to_load) as polling_data:
         #use string function and max to find the candidates with most votes from candidate_list[i]
         #the winner of the election based on popular vote
     print("Winner: " + str(max(pypoll)))
-    print()
     poll_win= 0
     #for x, y in candidates.items():
        # if y > poll_win:
@@ -98,17 +99,12 @@ with open(output_path, 'w', newline='') as csvfile:
     #csvwriter= csv.writer(csvfile, delimiter=',')
     csvwriter= csv.writer(csvfile)
     csvwriter.writerow(['Election Results']) #write row election results to new txt file which python will read
-    csvwriter.writerow(f'Total Votes: {total_votes}\n') #write row total votes to new txt file which python will read
+    csvwriter.writerow(['Total Votes']) 
+    #write row total votes to new txt file which python will read
+    csvwriter.writerow(f"Total Votes: {total_votes}")
     csvwriter.writerow(['Khan'])
+    
     csvwriter.writerow(['Correy'])
     csvwriter.writerow(['Li'])
     csvwriter.writerow(['OTooley'])
     csvwriter.writerow(['Winner'])
-    #csvwriter.writerow()
-    #for x in candidates.value :
-        #print (x)
-
-
-       
-
-   
